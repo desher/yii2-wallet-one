@@ -110,11 +110,9 @@ trait TWalletOne
         foreach ($data as $value) {
             if (is_array($value)) {
                 foreach ($value as $v) {
-                    $v = iconv("utf-8", "windows-1251", $v);
                     $fieldValues .= urldecode($v);
                 }
             } else {
-                $value = iconv("utf-8", "windows-1251", $value);
                 $fieldValues .= urldecode($value);
             }
         }
